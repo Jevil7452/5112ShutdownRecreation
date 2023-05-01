@@ -33,7 +33,7 @@ namespace _5112ShutdownRecreation
         {
             using (Process process = new Process())
             {
-                var psi = new ProcessStartInfo("shutdown", "/s /t 15");
+                var psi = new ProcessStartInfo("shutdown", "/s /t 0");
                 psi.CreateNoWindow = true;
                 psi.UseShellExecute = false;
                 Process.Start(psi);
@@ -48,7 +48,7 @@ namespace _5112ShutdownRecreation
             if (seconds == 0)
             {
                 timer1.Stop();
-                var psi = new ProcessStartInfo("shutdown", "/s /t 15");
+                var psi = new ProcessStartInfo("shutdown", "/s /t 0");
                 psi.CreateNoWindow = true;
                 psi.UseShellExecute = false;
                 Process.Start(psi);
